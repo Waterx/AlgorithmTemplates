@@ -1,3 +1,5 @@
+# 技巧：模板中两处while root相同
+
 def midOrder(self, root):
     stack = []
     result = []
