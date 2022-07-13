@@ -9,11 +9,16 @@
 # 1. 栈内的元素是递增的
 # 2. 当元素出栈时，说明这个 新元素 是出栈元素 向后 找第一个比其小的元素
 # 3. 当元素出栈后，说明 新栈顶元素 是出栈元素 向前 找第一个比其小的元素
+#
+# 意义：
+# 用 O(n) 复杂度的一重遍历找到每个元素前后最近的更小/大元素位置
+
 
 stack = []
 for i in range(nums):
 
     while stack and stack[-1] > nums[i]:
         stack.pop()
+        # do something
     
     stack.append(nums[i])
