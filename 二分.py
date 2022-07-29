@@ -20,8 +20,6 @@ def binary_search(nums, target):
     # 为了统⼀模板，我们就都采⽤ start + 1 < end，就保证不会出现死循环
     while start + 1 < end:
         # python 没有 overflow 的问题，直接 // 2 就可以了
-        # java和C++ 最好写成 mid = start + (end - start) / 2
-        # 防⽌在 start = 2^31 - 1, end = 2^31 - 1 的情况下出现加法 overflow
         mid = (start + end) // 2
         # > , =, < 的逻辑先分开写，然后在看看 = 的情况是否能合并到其他分⽀⾥
         if nums[mid] < target:
