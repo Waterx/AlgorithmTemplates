@@ -3,6 +3,20 @@
 # 心得：
 # 做二分题目的时候要在心里构想出图形化的 mid 向 start 或 end 的逼近状态
 
+# —————— ฅ՞• •՞ฅ ———————
+# **没找到 target 的时候 start end 停在哪里？分三种情况
+
+# 1. target 比数组头小的时候，start = 0 end = 1
+# 2. target 比数组尾大的时候，start = -2 end = -1
+# 3. target 在中间的时候，start 是比 target 小的，end 是比 target 大的，end 位置是插入的地方
+
+# 可看题目 35. 搜索插入位置 https://leetcode.cn/problems/search-insert-position/
+# 以上适用于无重复元素的情况
+
+
+# —————— ฅ՞• •՞ฅ ———————
+# **判断里 = 的情况的用处在于：
+# 
 
 
 def binary_search(nums, target):
@@ -13,11 +27,7 @@ def binary_search(nums, target):
 
     start, end = 0, len(nums) - 1
 
-    # ⽤ start + 1 < end ⽽不是 start < end 的⽬的是为了避免死循环
-    # 在 first position of target 的情况下不会出现死循环
-    # 但 last position of target 的情况下会出现死循环
-    # 样例：nums=[1，1] target = 1
-    # 为了统⼀模板，我们就都采⽤ start + 1 < end，就保证不会出现死循环
+    # ⽤ start + 1 < end 避免死循环，解释过程略
     while start + 1 < end:
         # python 没有 overflow 的问题，直接 // 2 就可以了
         mid = (start + end) // 2
@@ -29,7 +39,7 @@ def binary_search(nums, target):
         else:
             end = mid   
 
-    # 因为上⾯的循环退出条件是 start + 1 < end
+    # 上⾯的循环退出条件是 start + 1 < end
     # 因此这⾥循环结束的时候，start 和 end 的关系是相邻关系（1和2，3和4这种）
     # 因此需要再单独判断 start 和 end 这两个数谁是我们要的答案
     # 如果是找 first position of target 就先看 start，否则就先看 end
@@ -47,7 +57,7 @@ print(binary_search(A, 8))
 
 
 #  ************ 去掉注释版本 *********************
-def search(self, nums: List[int], target: int) -> int:
+def search(self, nums, target) -> int:
     if not nums:
         return -1
     start, end = 0, len(nums) - 1
