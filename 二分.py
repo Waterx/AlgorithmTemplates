@@ -3,6 +3,7 @@
 # 心得：
 # 做二分题目的时候要在心里构想出图形化的 mid 向 start 或 end 的逼近状态
 
+
 # —————— ฅ՞• •՞ฅ ———————
 # **没找到 target 的时候 start end 停在哪里？分三种情况
 
@@ -15,8 +16,10 @@
 
 
 # —————— ฅ՞• •՞ฅ ———————
-# **判断里 = 的情况的用处在于：
-# 
+# **判断里 == 的情况的用处在于：
+# 1.找左目标的时候 end = mid，相当于右边界向左逼近
+# 2.找右目标的时候 start = mid，相当于左边界向右逼近
+
 
 
 def binary_search(nums, target):
@@ -60,6 +63,7 @@ print(binary_search(A, 8))
 def search(self, nums, target) -> int:
     if not nums:
         return -1
+        
     start, end = 0, len(nums) - 1
     while start + 1 < end:
         mid = (start + end) // 2
