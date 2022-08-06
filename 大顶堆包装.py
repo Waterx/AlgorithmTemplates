@@ -4,8 +4,7 @@
 import heapq
 
 def heapify(self, x):
-    for i in range(len(x)):
-        x[i] = -x[i]
+    x = [-v for v in x]
     heapq.heapify(x)
     return x
 def heappush(self, heap, item):

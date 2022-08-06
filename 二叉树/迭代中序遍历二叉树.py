@@ -12,6 +12,7 @@ def midOrder(self, root):
     
     while stack:
         root = stack.pop()
+        # 这里相当于递归方法的 dfs(root.left) 与 dfs(root.right) 之间的部分
         result.append(root.val)
         if root.right:
             root = root.right
