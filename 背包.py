@@ -1,6 +1,6 @@
 
 class Solution:
-    def maxValue(self, bag_size, weight, value):
+    def maxValue_2d(self, bag_size, weight, value):
 
         #    容量  0   1   2   3   ……  j
         #        ______________________
@@ -15,10 +15,9 @@ class Solution:
 
         # 先处理「考虑第一件物品」的情况
         for i in range(1, cols):
-            if weight[0] <= i: 
-                dp[0][i] = value[0]
+            if weight[0] <= i: dp[0][i] = value[0]
 
-        # // 再处理「考虑其余物品」的情况
+        # 再处理「考虑其余物品」的情况
         for i in range(1, rows):
             for j in range(cols):
 
@@ -34,8 +33,45 @@ class Solution:
         return dp[-1][bag_size]
 
 
+    def maxValue_rotate(self, bag_size, weight, value):
+
+        rows, cols = 2, bag_size + 1
+        dp = [[0] * cols for _ in range(rows)]
+
+        for i in range(1, cols):
+            if weight[0] <= i: dp[0][i] = value[0]
+
+        for i in range(1, rows):
+            for j in range(cols):
+
+                n = dp[(i-1)&1][j]
+                y = dp[(i-1)&1][j-weight[i]] + value[i] if j >= weight[i] else 0
+                
+                dp[i&1][j] = max(n, y)
+
+        n = len(weight)
+        print(dp, dp[n&1][bag_size])
+        return dp[n&1][bag_size]
+
+
+    def maxValue_1d_press(self, bag_size, weight, value):
+
+        rows, cols = len(weight), bag_size + 1
+        dp = [0] * cols
+
+        for i in range(rows):
+            for j in range(bag_size, weight[i]-1, -1):
+                n = dp[j]
+                y = dp[j-weight[i]] + value[i]
+                dp[j] = max(n, y)
+
+        print(dp)
+        return dp[bag_size]
+
 bag_size = 4
 weight = [1, 3, 4]
 value = [15, 20, 30]
 c = Solution()
-c.maxValue(bag_size, weight, value)
+c.maxValue_2d(bag_size, weight, value)
+c.maxValue_rotate(bag_size, weight, value)
+c.maxValue_1d_press(bag_size, weight, value)
