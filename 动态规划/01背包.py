@@ -1,5 +1,18 @@
 
 class Solution:
+
+    # 记这个，推理过程看宫水三叶以及下面的2d完整版和滚动数组版
+    def maxValue_1d_press(self, bag_size, weight, value):
+
+        dp = [0] * (bag_size + 1)
+
+        for i in range(len(weight)):
+            for j in range(bag_size, weight[i] - 1, -1):
+                dp[j] = max(dp[j], dp[j - weight[i]] + value[i])
+
+        print(dp)
+        return dp[bag_size]
+
     def maxValue_2d(self, bag_size, weight, value):
 
         #    容量  0   1   2   3   ……  j
@@ -14,7 +27,7 @@ class Solution:
         dp = [[0] * cols for _ in range(rows)]
 
         # 先处理「考虑第一件物品」的情况
-        for i in range(1, cols):
+        for i in range(cols):
             if weight[0] <= i: dp[0][i] = value[0]
 
         # 再处理「考虑其余物品」的情况
@@ -38,7 +51,7 @@ class Solution:
         rows, cols = 2, bag_size + 1
         dp = [[0] * cols for _ in range(rows)]
 
-        for i in range(1, cols):
+        for i in range(cols):
             if weight[0] <= i: dp[0][i] = value[0]
 
         for i in range(1, rows):
@@ -53,20 +66,6 @@ class Solution:
         print(dp, dp[n&1][bag_size])
         return dp[n&1][bag_size]
 
-
-    def maxValue_1d_press(self, bag_size, weight, value):
-
-        rows, cols = len(weight), bag_size + 1
-        dp = [0] * cols
-
-        for i in range(rows):
-            for j in range(bag_size, weight[i]-1, -1):
-                n = dp[j]
-                y = dp[j-weight[i]] + value[i]
-                dp[j] = max(n, y)
-
-        print(dp)
-        return dp[bag_size]
 
 bag_size = 4
 weight = [1, 3, 4]
