@@ -9,6 +9,8 @@ class Solution:
         for i in range(len(weight)):
             for j in range(bag_size, weight[i] - 1, -1):
                 dp[j] = max(dp[j], dp[j - weight[i]] + value[i])
+                # 求组合类用的是这个，初始化 dp[0] = 1，理论上也很好解释，装满容量为0的背包，有1种方法，就是装0件物品。
+                # dp[j] += dp[j - nums[i]] 
 
         print(dp)
         return dp[bag_size]
