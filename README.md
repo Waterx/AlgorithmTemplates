@@ -2,8 +2,8 @@
 
 算法 | 链接
 --- | ---
-二分搜索 | https://glacier-opera-c16.notion.site/e7c9e70e4b764473aac60762a5c488be?v=9c8dd88989684f34a02565eaaee57ca1
-链表 | https://glacier-opera-c16.notion.site/5ce65d31390048a69b7d1333b950d122?v=523e823fa93e4534b4dde2e4e5a0b7a1
+🎏二分搜索 | https://glacier-opera-c16.notion.site/e7c9e70e4b764473aac60762a5c488be?v=9c8dd88989684f34a02565eaaee57ca1
+🧲链表 | https://glacier-opera-c16.notion.site/5ce65d31390048a69b7d1333b950d122?v=523e823fa93e4534b4dde2e4e5a0b7a1
 滑动窗口 | https://www.notion.so/fdff796ed5f54ed3a90f6222b142bf32?v=d3b7e6e7807d492295f68dcd2661ee73
 堆 | https://glacier-opera-c16.notion.site/3360d5e0718d4c51a5ad40b0f2bda1ef?v=70c3e304eb3443029a143663a8ff1186
 栈、单调栈 | https://www.notion.so/baeff8b31df84045aa3519d2dba68041?v=b8268329f11245fdae3b82ffff4ada2f
