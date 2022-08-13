@@ -18,3 +18,7 @@ Markdown | Less | Pretty
 1 | 2 | 3 [link text itself]
 
 [link text itself]: http://www.reddit.com
+
+算法 | 链接
+--- | ---
+二分搜索 | https://glacier-opera-c16.notion.site/e7c9e70e4b764473aac60762a5c488be?v=9c8dd88989684f34a02565eaaee57ca1
