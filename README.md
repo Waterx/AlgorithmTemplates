@@ -1,6 +1,6 @@
 # AlgorithmTemplates
 
-算法 | 链接
+算法记录 | 链接
 --- | ---
 🎏二分搜索 | https://glacier-opera-c16.notion.site/e7c9e70e4b764473aac60762a5c488be?v=9c8dd88989684f34a02565eaaee57ca1
 🧲链表 | https://glacier-opera-c16.notion.site/5ce65d31390048a69b7d1333b950d122?v=523e823fa93e4534b4dde2e4e5a0b7a1
