@@ -1,5 +1,5 @@
 
-# 按元组第2位排序
+# 按1元素排序
 nums = [(3, 1), (3, 3), (2, 2)]
 nums.sort(key = lambda x:x[1])
 print(nums)
@@ -16,6 +16,10 @@ nums = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
 def sortRule(nums):
     return -nums[0], nums[1]
 nums.sort(key=sortRule)
+print(nums)
+
+nums = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
+nums.sort(key = lambda x:(-x[0], x[1]))
 print(nums)
 
 
