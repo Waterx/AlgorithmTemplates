@@ -1,5 +1,3 @@
-# TODO：find a new one
-
 # MergeSort in Python
 
 # 时间复杂度	 
@@ -10,56 +8,58 @@
 # 空间复杂度	O(n)
 # 稳定	     Yes
 
-def mergeSort(array):
-    if len(array) > 1:
-
-        # mid is the point where the array is divided into two subarrays
-        mid = len(array)//2
-        L = array[:mid]
-        R = array[mid:]
-        # print(L, R)
-        # Sort the two halves
-        mergeSort(L)
-        mergeSort(R)
-
-        i = j = k = 0
-
-        # Until we reach either end of either L or R, pick larger among
-        # elements L and R and place them in the correct position at A[p..r]
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                array[k] = L[i]
-                i += 1
-            else:
-                array[k] = R[j]
-                j += 1
-            k += 1
-
-        # When we run out of elements in either L or R,
-        # pick up the remaining elements and put in A[p..r]
-        while i < len(L):
-            array[k] = L[i]
-            i += 1
-            k += 1
-
-        while j < len(R):
-            array[k] = R[j]
-            j += 1
-            k += 1
+def sortIntegers(A):
+    if not A:
+        return A
+    temp = [0] * len(A)
+    merge_sort(A, 0, len(A) - 1, temp)
 
 
-# Print the array
-def printList(array):
-    for i in range(len(array)):
-        print(array[i], end=" ")
-    print()
+def merge_sort(A, start, end, temp):
+    if start >= end:
+        return
+
+    # 处理左半区间
+    merge_sort(A, start, (start + end) // 2, temp)
+    # 处理右半区间
+    merge_sort(A, (start + end) // 2 + 1, end, temp)
+    # 合并排序数组
+    merge(A, start, end, temp)
+
+
+def merge(A, start, end, temp):
+    middle = (start + end) // 2
+    left_index = start
+    right_index = middle + 1
+    index = start
+
+    while left_index <= middle and right_index <= end:
+        if A[left_index] < A[right_index]:
+            temp[index] = A[left_index]
+            index += 1
+            left_index += 1
+        else:
+            temp[index] = A[right_index]
+            index += 1
+            right_index += 1
+
+    while left_index <= middle:
+        temp[index] = A[left_index]
+        index += 1
+        left_index += 1
+
+    while right_index <= end:
+        temp[index] = A[right_index]
+        index += 1
+        right_index += 1
+        
+    for i in range(start, end + 1):
+        A[i] = temp[i]
 
 
 # Driver program
 if __name__ == '__main__':
     array = [6, 5, 12, 1, 10, 9, 1]
-
-    mergeSort(array)
-
+    sortIntegers(array)
     print("Sorted array is: ")
-    printList(array)
+    print(array)
