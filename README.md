@@ -14,3 +14,7 @@
 🐷贪心 | https://www.notion.so/dda666aa50d74c77986d07d224f88529?v=9e0078eb976e40d4bde06cb73a96e148
 🍒回溯/深度优先DFS | https://www.notion.so/7b4197f375e34d8b8186d9b13b5acffb?v=d2e3278596b0441ea88e90e0a87a0a49
 🧮动态规划 | https://www.notion.so/bea1c51c57e14f6890240fb692b39e83?v=040ba45247b24c4e974f51dac35528a2
+
+面经 | 链接
+--- | ---
+🎰网络 HTTP | https://app.yinxiang.com/fx/232b3cd1-abeb-4e99-986c-bb8729994fdb
