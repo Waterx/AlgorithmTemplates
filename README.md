@@ -15,6 +15,12 @@
 🍒回溯/深度优先DFS | https://www.notion.so/7b4197f375e34d8b8186d9b13b5acffb?v=d2e3278596b0441ea88e90e0a87a0a49
 🧮动态规划 | https://www.notion.so/bea1c51c57e14f6890240fb692b39e83?v=040ba45247b24c4e974f51dac35528a2
 
+面试题目
 面经 | 链接
 --- | ---
-🎰网络 HTTP | https://app.yinxiang.com/fx/232b3cd1-abeb-4e99-986c-bb8729994fdb
+🎨网络 TCP | https://app.yinxiang.com/fx/32c093da-de62-4701-931f-4014b1e49f88
+📯网络 HTTP | https://app.yinxiang.com/fx/232b3cd1-abeb-4e99-986c-bb8729994fdb
+🎮操作系统 | https://app.yinxiang.com/fx/b87045eb-cfcb-4e15-bf6b-5cc1ad16bbd6
+🔌中断、IO多路 | https://app.yinxiang.com/fx/7b118415-c918-40a0-ac62-4071cf271cdb
+💿数据库 | https://app.yinxiang.com/fx/549e0af9-f661-4d69-bb81-b90177ef2ad9
+⚙中间件 | https://app.yinxiang.com/fx/7c2f0802-1211-47b2-9ac5-5ada86c272ba
