@@ -8,6 +8,8 @@
 # 空间复杂度	O(log n)
 # 稳定	不
 
+# tip: 只要 left 和 right 比较都带等于，
+#        和 pivot 比较都不带等于
 
 def sortIntegers(A):
     # Write your code here
@@ -29,7 +31,7 @@ def quickSort(A, start, end):
             A[left], A[right] = A[right], A[left]
             left += 1
             right -= 1
-    quickSort(A, start, right)
+    quickSort(A, start, right)      # 最后 left 和 right 会交错开
     quickSort(A, left, end)
 
 
