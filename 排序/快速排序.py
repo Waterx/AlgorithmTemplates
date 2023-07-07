@@ -9,7 +9,8 @@
 # 稳定	不
 
 # tip: 只要 left 和 right 比较都带等于，
-#        和 pivot 比较都不带等于
+#      和 pivot 比较都不带等于
+#      算法结构类似二叉树先序遍历
 
 def sortIntegers(A):
     # Write your code here
@@ -21,7 +22,8 @@ def quickSort(A, start, end):
     left, right = start, end
     # key point 1: pivot是值而不是下标
     pivot = A[(start + end) // 2]
-    # key point 2: 每次都要比较 left 和 right ，并且注意带 = 号
+
+    # key point 2: 每次都要比较 left 和 right ，一共 4 次，并且注意带 = 号
     while left <= right:
         while left <= right and A[left] < pivot:
             left += 1
@@ -31,7 +33,8 @@ def quickSort(A, start, end):
             A[left], A[right] = A[right], A[left]
             left += 1
             right -= 1
-    quickSort(A, start, right)      # 最后 left 和 right 会交错开
+            
+    quickSort(A, start, right)      # key point 3: 最后 left 和 right 会交错开
     quickSort(A, left, end)
 
 
