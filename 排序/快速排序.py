@@ -8,9 +8,9 @@
 # 空间复杂度	O(log n)
 # 稳定	不
 
-# tip: 只要 left 和 right 比较都带等于，
-#      和 pivot 比较都不带等于
-#      算法结构类似二叉树先序遍历
+# tip: 只要 left 和 right 比较都带等于，（左右带等比四次，
+#      和 pivot 比较都不带等于          （派非下标不带等
+#      算法结构类似二叉树先序遍历        （先序参数交错开
 
 def sortIntegers(A):
     # Write your code here
