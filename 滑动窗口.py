@@ -1,5 +1,25 @@
 # https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/yi-ge-mo-ban-miao-sha-10dao-zhong-deng-n-sb0x/
 
+# 简洁版
+class Solution:
+    def problemName(self, s: str) -> int:
+        x, y = ..., ...
+
+        start = 0
+        for end in range(len(s)):
+            x = new_x
+            if condition:
+                y = new_y
+            
+            # 情况1
+            if 窗口长度达到了限定长度:
+                start += 1
+            
+            # 情况2 （较多
+            while 不合法:
+                start += 1
+
+# 讲解版
 class Solution:
     def problemName(self, s: str) -> int:
         # Step 1: 定义需要维护的变量们 (对于滑动窗口类题目，这些变量通常是最小长度，最大长度，或者哈希表)

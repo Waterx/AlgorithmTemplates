@@ -1,5 +1,9 @@
 # https://leetcode.cn/problems/diameter-of-binary-tree/solution/yi-pian-wen-zhang-jie-jue-suo-you-er-cha-6g00/
 
+# 124. 二叉树中的最大路径和 
+# 687. 最长同值路径 
+# 543. 二叉树的直径
+
 # ignore this
 class TreeNode:
     pass
